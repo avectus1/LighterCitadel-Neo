@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "${loader_version_range}"
 license = "${mod_license}"
-issueTrackerURL = "https://github.com/" # Hope I don't forget to put issue tracker link after opening git repo
+issueTrackerURL = "https://github.com/Linggango/LighterCitadel/issues"
 
 [[mods]]
 modId = "${mod_id}"

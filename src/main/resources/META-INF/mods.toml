@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/" # Hope I don't forget to put issue tracker link after opening git repo
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "${mod_authors}"
+displayTest = "IGNORE_ALL_VERSION"
+description = '''
+A standalone performance layer for Citadel.
+Every optimization attempts to preserve Citadel's behaviour exactly and can be toggled in config/citadel-optimizer.toml.
+'''
+
+[[dependencies."${mod_id}"]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "citadel"
+mandatory = true
+versionRange = "[2.6.0,)"
+ordering = "AFTER"
+side = "BOTH"

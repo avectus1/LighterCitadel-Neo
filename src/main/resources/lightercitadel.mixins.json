@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.misanthropy.lightercitadel.mixin",
+  "plugin": "com.misanthropy.lightercitadel.LighterCitadelMixinPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "lightercitadel.refmap.json",
+  "mixins": [
+    "CitadelServerDataMixin",
+    "ServerProxyMixin",
+    "TickRateTrackerMixin"
+  ],
+  "client": [
+    "client.ClientProxyMixin",
+    "client.ClientTickRateTrackerMixin",
+    "client.LivingEntityRendererEventsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

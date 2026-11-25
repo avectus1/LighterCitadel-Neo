@@ -1,0 +1,40 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "GNU LGPL 3.0"
+issueTrackerURL = "https://github.com/avectus1/LighterCitadel-Neo/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "Misanthropy, avectus"
+displayTest = "IGNORE_ALL_VERSION"
+description = '''
+NeoForge 1.21.1 port of LighterCitadel by Misanthropy.
+A standalone performance layer for Citadel.
+Every optimization attempts to preserve Citadel's behaviour exactly and can be toggled in config/citadel-optimizer.toml.
+'''
+
+[[mixins]]
+config = "lightercitadel.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "citadel"
+type = "required"
+versionRange = "[2.7.0,)"
+ordering = "AFTER"
+side = "BOTH"
